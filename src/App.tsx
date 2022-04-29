@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Title from "./components/Title";
 import Form from "./components/Form";
-import './App.css';
 import Results from "./components/Results";
+import './App.css';
 
 type ResultsStateType = {
   country: string;
@@ -36,10 +36,12 @@ function App() {
     })
   }
   return (
-    <div className="test">
-      <Title />
-      <Form setCity={setCity} getWeather={getWeather} />
-      <Results results={results} />
+    <div className="wrapper">
+      <div className="container">
+        <Title />
+        <Form setCity={setCity} getWeather={getWeather} />
+        <Results results={results} />
+      </div>
     </div>
   );
 }
